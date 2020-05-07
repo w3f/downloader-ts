@@ -1,5 +1,6 @@
 import axios from 'axios';
 import fs from 'fs-extra';
+import path from 'path';
 import { Logger, createLogger } from '@w3f/logger';
 
 
@@ -15,6 +16,9 @@ export class Downloader {
     }
 
     async getFile(url: string, filePath: string): Promise<void> {
+        const dirPath = path.dirname(filePath);
+        await fs.ensureDir(dirPath);
+
         const writer = fs.createWriteStream(filePath);
 
         this._logger.debug(`Requesting ${url}`);
