@@ -3,13 +3,13 @@ import nock from 'nock';
 import path from 'path';
 import tmp from 'tmp';
 
-import { Downloader } from '../src/index';
+import { DownloadManager } from '../src/index';
 
 import { should } from 'chai';
 
 should();
 
-const subject = new Downloader();
+const subject = new DownloadManager();
 
 const expected = 'content';
 const site = 'http://localhost:8000'
