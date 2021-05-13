@@ -1,6 +1,6 @@
 {
   "name": "@w3f/downloader",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Downloader",
   "repository": "git@github.com:w3f/downloader-ts.git",
   "author": "W3F Infrastructure Team <devops@web3.foundation>",
@@ -20,8 +20,8 @@
     "start": "node ./dist/index.js start"
   },
   "dependencies": {
-    "@w3f/logger": "^0.3.0",
-    "axios": "^0.19.2",
+    "@w3f/logger": "^0.4.3",
+    "axios": "^0.21.1",
     "fs-extra": "^9.0.0"
   },
   "devDependencies": {
